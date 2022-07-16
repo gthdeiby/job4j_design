@@ -16,11 +16,11 @@ public class SimpleMap<K, V> implements Map<K, V> {
     @Override
     public boolean put(K key, V value) {
         boolean rsl = false;
-        int hashCode = (key == null) ? 0 : key.hashCode();
-        int index = indexFor(hash(hashCode));
         if (count >= LOAD_FACTOR * capacity) {
             expand();
         }
+        int hashCode = (key == null) ? 0 : key.hashCode();
+        int index = indexFor(hash(hashCode));
         if (table[index] == null) {
             table[index] = new MapEntry<>(key, value);
             rsl = true;
@@ -45,6 +45,7 @@ public class SimpleMap<K, V> implements Map<K, V> {
         for (MapEntry<K, V> map : anotherTable) {
             if (map != null) {
                 put(map.key, map.value);
+                count--;
             }
         }
         modCount++;
