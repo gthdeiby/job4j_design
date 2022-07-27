@@ -19,11 +19,11 @@ public class Config {
     public void load() {
         try (BufferedReader in = new BufferedReader(new FileReader(path))) {
              in.lines()
-                     .filter(s -> !s.contains("#") && !s.isBlank())
+                     .filter(s -> !s.startsWith("#") && !s.isBlank())
                      .map(s -> s.split("=", 2))
                      .forEach(s -> {
                          if (s.length != 2 || s[0].isBlank() || s[1].isBlank()) {
-                             throw new IllegalArgumentException();
+                             throw new IllegalArgumentException("Key-value pair violation");
                          }
                          values.put(s[0], s[1]);
                      });
