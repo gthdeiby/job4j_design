@@ -12,7 +12,7 @@ public class Analizy {
                 if (availability && (src[0].equals("400") || src[0].equals("500"))) {
                     out.write(src[1] + ";");
                     availability = false;
-                } else if (!availability && ("200".equals(src[0]) || "300".equals(src[0]))) {
+                } else if (!availability && (src[0].equals("200") || src[0].equals("300"))) {
                     out.println(src[1] + ";");
                     availability = true;
                 }
