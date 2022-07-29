@@ -8,12 +8,13 @@ public class Analizy {
              PrintWriter out = new PrintWriter(new BufferedOutputStream(new FileOutputStream(target)))) {
             boolean availability = true;
             for (String line = in.readLine(); line != null; line = in.readLine()) {
-                String[] src = line.split(" ");
-                if (availability && (src[0].equals("400") || src[0].equals("500"))) {
-                    out.write(src[1] + ";");
+                String[] values = line.split(" ");
+                if (availability && ("400".equals(values[0]) || "500".equals(values[0]))) {
+                    out.write(values[1] + ";");
                     availability = false;
-                } else if (!availability && (src[0].equals("200") || src[0].equals("300"))) {
-                    out.println(src[1] + ";");
+                }
+                if (!availability && ("200".equals(values[0]) || "300".equals(values[0]))) {
+                    out.println(values[1] + ";");
                     availability = true;
                 }
             }
