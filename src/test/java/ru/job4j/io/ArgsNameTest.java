@@ -36,19 +36,19 @@ class ArgsNameTest {
 
     @Test
     void whenKeyIsEmpty() {
-        ArgsName jvm = ArgsName.of(new String[] {"-=512"});
-        assertThatThrownBy(() -> jvm.get("Xms")).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> ArgsName.of(new String[] {"-=512"}))
+                .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
     void whenMissingEquals() {
-        ArgsName jvm = ArgsName.of(new String[] {"-Xmx512"});
-        assertThatThrownBy(() -> jvm.get("Xms")).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> ArgsName.of(new String[] {"-Xmx512"}))
+                .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
     void whenMissingHyphen() {
         ArgsName jvm = ArgsName.of(new String[] {"Xmx=512"});
-        assertThatThrownBy(() -> jvm.get("Xms")).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> jvm.get("Xmx")).isInstanceOf(IllegalArgumentException.class);
     }
 }
