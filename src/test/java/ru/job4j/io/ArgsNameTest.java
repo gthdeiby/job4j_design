@@ -48,7 +48,7 @@ class ArgsNameTest {
 
     @Test
     void whenMissingHyphen() {
-        ArgsName jvm = ArgsName.of(new String[] {"Xmx=512"});
-        assertThatThrownBy(() -> jvm.get("Xmx")).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> ArgsName.of(new String[] {"Xmx=512"}))
+                .isInstanceOf(IllegalArgumentException.class);
     }
 }
