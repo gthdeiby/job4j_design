@@ -1,5 +1,6 @@
 package ru.job4j.io;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,23 +27,24 @@ public class ConsoleChat {
         String reply;
         Random random = new Random();
         List<String> conversation = new ArrayList<>();
+        List<String> phrases = readPhrases();
         Scanner in = new Scanner(System.in);
         while (running) {
             input = in.nextLine();
             conversation.add(input);
             switch (input) {
                 case STOP:
-                    running = false;
+                    writing = false;
                     break;
                 case OUT:
-                    writing = false;
+                    running = false;
                     break;
                 case CONTINUE:
                     writing = true;
                     break;
                 default:
                     if (writing) {
-                        reply = readPhrases().get(random.nextInt(readPhrases().size()));
+                        reply = phrases.get(random.nextInt(phrases.size()));
                         System.out.println(reply);
                         conversation.add(reply);
                     }
