@@ -31,9 +31,18 @@ public class ConsoleChat {
             input = in.nextLine();
             conversation.add(input);
             switch (input) {
-                case STOP -> running = false;
-                case OUT -> writing = false;
-                case CONTINUE -> writing = true;
+                case STOP -> {
+                    running = false;
+                    break;
+                }
+                case OUT -> {
+                    writing = false;
+                    break;
+                }
+                case CONTINUE -> {
+                    writing = true;
+                    break;
+                }
                 default -> {
                     if (writing) {
                         reply = readPhrases().get(random.nextInt(readPhrases().size()));
