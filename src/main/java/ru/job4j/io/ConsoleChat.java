@@ -31,25 +31,21 @@ public class ConsoleChat {
             input = in.nextLine();
             conversation.add(input);
             switch (input) {
-                case STOP -> {
+                case STOP:
                     running = false;
                     break;
-                }
-                case OUT -> {
+                case OUT:
                     writing = false;
                     break;
-                }
-                case CONTINUE -> {
+                case CONTINUE:
                     writing = true;
                     break;
-                }
-                default -> {
+                default:
                     if (writing) {
                         reply = readPhrases().get(random.nextInt(readPhrases().size()));
                         System.out.println(reply);
                         conversation.add(reply);
                     }
-                }
             }
         }
         saveLog(conversation);
