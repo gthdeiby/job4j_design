@@ -1,0 +1,9 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+<car leftHand="true" year="2008" model="Ford Explorer">
+    <engine type="Petrol" power="296"/>
+    <options>
+        <option>Luke</option>
+        <option>ABS</option>
+        <option>GPS</option>
+    </options>
+</car>
