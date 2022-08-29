@@ -26,4 +26,24 @@ public class Car {
         this.engine = engine;
         this.options = options;
     }
+
+    public boolean isLeftHand() {
+        return leftHand;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public String[] getOptions() {
+        return options;
+    }
 }

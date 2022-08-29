@@ -16,4 +16,12 @@ public class Engine {
                 + ", power=" + power
                 + '}';
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getPower() {
+        return power;
+    }
 }
