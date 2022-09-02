@@ -6,7 +6,7 @@ create table cars(
 );
 
 insert into cars(model, power, color)
-values('Toyota Carina', 130, 'aquamarine')
+values('Toyota Carina', 130, 'aquamarine');
 
 update cars set power = 133;
 
