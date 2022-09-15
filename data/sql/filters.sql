@@ -35,7 +35,7 @@ select * from product where name like 'Мороженое%';
 select * from product where expired_date < current_date;
 
 -- Получение самого дорогого продукта
-select * from product having price = (select max(price) from product);
+select * from product where price = (select max(price) from product);
 
 -- Получение для каждого типа количество продуктов к нему принадлежащих
 select t.name Тип, count(t.name) Количество
