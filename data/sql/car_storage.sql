@@ -51,11 +51,11 @@ values ('Ford Explorer', 4, 1, 2),
        ('Toyota Hilux', 5, 2, 1);
 
 -- Список всех машин и все привязанные к ним детали
-select c.name Модель, cb.name Кузов, ce.name Двигатель, ct.name Трасмиссия
+select c.name Модель, cb.name Кузов, ce.name Двигатель, ct.name Трансмиссия
 from cars c
 left join car_bodies cb on c.car_bodies_id = cb.id
-left join car_engines ce on c.car_engine_id = ce.id
-left join car_transmissions ct on c.transmissions_id = ct.id;
+left join car_engines ce on c.car_engines_id = ce.id
+left join car_transmissions ct on c.car_transmissions_id = ct.id;
 
 -- Вывести кузовы, которые не используются НИ в одной машине
 select cb.name from car_bodies cb
