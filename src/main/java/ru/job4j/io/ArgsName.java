@@ -23,6 +23,9 @@ public class ArgsName {
             if (!arg.contains("=")) {
                 throw new IllegalArgumentException("Missing \"=\"");
             }
+            if (!arg.startsWith("-")) {
+                throw new IllegalArgumentException("Missing \"-\"");
+            }
             String[] values = arg.split("=", 2);
             if (values.length != 2 || values[0].equals("-")
                     || values[0].isEmpty() || values[1].isEmpty()) {
