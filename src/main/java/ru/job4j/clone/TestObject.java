@@ -12,20 +12,21 @@ public class TestObject implements Cloneable {
     }
 
     public static void main(String[] args) throws CloneNotSupportedException {
-//        TestObject testObj1 = new TestObject();
-//        testObj1.num = 5;
-//        TestObject testObj2 = testObj1;
-//        testObj2.num = 10;
-//        System.out.println(testObj1.num);
+        TestObject testObj1 = new TestObject();
+        testObj1.num = 5;
+        TestObject testObj2 = testObj1;
+        testObj2.num = 10;
+        System.out.println(testObj1.num);
+
         /*
         10
          */
-//        TestObject testObj3 = new TestObject();
-//        testObj3.num = 5;
-//        TestObject testObj4 = testObj3.clone();
-//        testObj4.num = 10;
-//        System.out.println(testObj3.num);
-//        System.out.println(testObj4.num);
+        TestObject testObj3 = new TestObject();
+        testObj3.num = 5;
+        TestObject testObj4 = testObj3.clone();
+        testObj4.num = 10;
+        System.out.println(testObj3.num);
+        System.out.println(testObj4.num);
         /*
         Shallow copy
         5
