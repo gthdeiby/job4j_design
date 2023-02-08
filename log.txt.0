@@ -1,0 +1,26 @@
+[0.011s][info][gc] Using Serial
+[4.854s][info][gc] GC(0) Pause Young (Allocation Failure) 3M->1M(11M) 5.256ms
+[4.981s][info][gc] GC(1) Pause Young (Allocation Failure) 5M->2M(11M) 3.443ms
+[5.077s][info][gc] GC(2) Pause Young (Allocation Failure) 5M->2M(11M) 2.237ms
+[5.110s][info][gc] GC(3) Pause Young (Allocation Failure) 6M->2M(11M) 1.150ms
+[5.558s][info][gc] GC(4) Pause Young (Allocation Failure) 6M->3M(11M) 1.672ms
+[5.899s][info][gc] GC(5) Pause Young (Allocation Failure) 6M->3M(11M) 3.304ms
+[14.160s][info][gc] GC(6) Pause Young (Allocation Failure) 7M->4M(11M) 2.961ms
+[40.231s][info][gc] GC(7) Pause Young (Allocation Failure) 7M->4M(11M) 2.152ms
+[56.372s][info][gc] GC(8) Pause Young (Allocation Failure) 7M->5M(11M) 1.492ms
+[56.381s][info][gc] GC(9) Pause Young (Allocation Failure) 8M->6M(11M) 1.297ms
+[56.400s][info][gc] GC(10) Pause Young (Allocation Failure) 9M->6M(11M) 0.593ms
+[56.415s][info][gc] GC(11) Pause Young (Allocation Failure) 9M->6M(11M) 0.666ms
+[56.421s][info][gc] GC(12) Pause Young (Allocation Failure) 9M->6M(11M) 0.643ms
+[56.427s][info][gc] GC(13) Pause Young (Allocation Failure) 9M->6M(11M) 0.817ms
+[56.432s][info][gc] GC(14) Pause Young (Allocation Failure) 10M->10M(11M) 0.041ms
+[56.452s][info][gc] GC(15) Pause Full (Allocation Failure) 10M->6M(11M) 20.053ms
+[56.458s][info][gc] GC(16) Pause Young (Allocation Failure) 9M->7M(11M) 0.681ms
+[56.463s][info][gc] GC(17) Pause Young (Allocation Failure) 10M->7M(11M) 0.605ms
+[62.250s][info][gc] GC(18) Pause Young (Allocation Failure) 10M->10M(11M) 0.043ms
+[62.262s][info][gc] GC(19) Pause Full (Allocation Failure) 10M->5M(11M) 11.486ms
+[80.277s][info][gc] GC(20) Pause Young (Allocation Failure) 8M->6M(11M) 0.592ms
+[108.462s][info][gc] GC(21) Pause Young (Allocation Failure) 9M->6M(11M) 0.548ms
+[137.471s][info][gc] GC(22) Pause Young (Allocation Failure) 9M->6M(11M) 0.390ms
+[167.365s][info][gc] GC(23) Pause Young (Allocation Failure) 9M->6M(11M) 0.514ms
+[195.495s][info][gc] GC(24) Pause Young (Allocation Failure) 9M->6M(11M) 0.381ms
