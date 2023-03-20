@@ -11,8 +11,8 @@ import static org.assertj.core.api.Assertions.*;
 class StringGeneratorTest {
     @Test
     void whenKeyNotFound() {
-        StringGenerator generator = new StringGenerator();
-        String defaultString ="I am a ${name}, Who are ${subject}? ";
+        Generator generator = new StringGenerator();
+        String defaultString = "I am a ${name}, Who are ${subject}? ";
         Map<String, String> keys = Map.of("name", "Petr Arsentev");
         assertThatThrownBy(() -> generator.produce(defaultString, keys))
                 .isInstanceOf(IllegalArgumentException.class)
@@ -21,8 +21,8 @@ class StringGeneratorTest {
 
     @Test
     void whenExtraKeysFound() {
-        StringGenerator generator = new StringGenerator();
-        String defaultString ="I am a ${name}.";
+        Generator generator = new StringGenerator();
+        String defaultString = "I am a ${name}.";
         Map<String, String> keys = Map.of("name", "Petr Arsentev", "subject", "you");
         assertThatThrownBy(() -> generator.produce(defaultString, keys))
                 .isInstanceOf(IllegalArgumentException.class)
@@ -32,7 +32,7 @@ class StringGeneratorTest {
     @Test
     void whenProduceSuccess() {
         Generator generator = new StringGenerator();
-        String defaultString ="I am a ${name}, Who are ${subject}? ";
+        String defaultString = "I am a ${name}, Who are ${subject}? ";
         Map<String, String> keys = Map.of("name", "Petr Arsentev", "subject", "you");
         String rsl = "I am a Petr Arsentev, Who are you? ";
         assertThat(generator.produce(defaultString, keys)).isEqualTo(rsl);
@@ -41,7 +41,7 @@ class StringGeneratorTest {
     @Test
     void whenProduceFailed() {
         Generator generator = new StringGenerator();
-        String defaultString ="I am a ${name}, Who are ${subject}?";
+        String defaultString = "I am a ${name}, Who are ${subject}?";
         Map<String, String> keys = Map.of("name", "Petr Arsentev", "subject", "you");
         String rsl = "I am a Petr Arsentev, Who are you? ";
         assertThat(generator.produce(defaultString, keys)).isNotEqualTo(rsl);
