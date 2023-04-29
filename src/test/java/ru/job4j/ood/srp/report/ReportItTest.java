@@ -6,20 +6,21 @@ import ru.job4j.ood.srp.formatter.ReportDateTimeParser;
 import ru.job4j.ood.srp.model.Employee;
 import ru.job4j.ood.srp.store.MemStore;
 
+import javax.xml.bind.JAXBException;
 import java.util.Calendar;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ReportITTest {
+class ReportItTest {
 
     @Test
-    public void whenItGenerated() {
+    public void whenItGenerated() throws JAXBException {
         MemStore store = new MemStore();
         Calendar now = Calendar.getInstance();
         Employee worker = new Employee("Ivan", now, now, 100);
         DateTimeParser<Calendar> parser = new ReportDateTimeParser();
         store.add(worker);
-        Report it = new ReportIT(store, parser);
+        Report it = new ReportIt(store, parser);
         StringBuilder expect = new StringBuilder()
                 .append("Name,Hired,Fired,Salary")
                 .append(System.lineSeparator())
