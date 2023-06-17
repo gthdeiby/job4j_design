@@ -1,11 +1,6 @@
 package ru.job4j.ood.lsp.storage;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Shop extends AbstractStore {
-
-    List<Food> shop = new ArrayList<>();
 
     @Override
     public boolean add(Food product) {
@@ -15,13 +10,8 @@ public class Shop extends AbstractStore {
             if (exp > 0.75) {
                 product.setPrice(product.getPrice() * (1 - product.getDiscount()));
             }
-            rsl = shop.add(product);
+            rsl = foods.add(product);
         }
         return rsl;
-    }
-
-    @Override
-    public List<Food> getFood() {
-        return shop;
     }
 }
